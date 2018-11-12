@@ -17,13 +17,13 @@
             }
         },
         mounted() {
-            var self = this;
-            axios
+            this.$http
                 .get('/tasks')
-                .then(function (response) {
-                    self.tasks = response.data;
+                .then((response) => {
+                    this.tasks = response.data;
                 })
             console.log('Component mounted.')
-        }
+        },
+
     }
 </script>

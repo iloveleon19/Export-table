@@ -22,6 +22,8 @@ Vue.use(VueRouter);
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('test', require('./components/Test.vue'));
 
+Vue.prototype.$http = axios;
+
 const app = new Vue({
     el: '#app',
     router:router,

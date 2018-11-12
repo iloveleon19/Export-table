@@ -4,8 +4,8 @@
     $str = "姓名,性別,年齡\n";
     // $str = mb_convert_encoding($str, "UTF-8", "auto"); // 通過auto自動檢測，轉換UTF-8
 
-    $rows[]=array('name'=>'∫kevin','sex'=>'βM','age'=>'30');
-    $rows[]=array('name'=>'\,  leon','sex'=>'M','age'=>'30');
+    $rows[]=array('name'=>'kevin','sex'=>'M','age'=>'30');
+    $rows[]=array('name'=>'leon','sex'=>'M','age'=>'30');
 
     foreach ($rows as $row) {
         // $name = mb_convert_encoding($row['name'], "UTF-8", "auto"); // 通過auto自動檢測，轉換UTF-8

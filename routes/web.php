@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('tasks', function () {
     return array("laravel", "vue", "axio");
 });
+
+Route::get('/profile/{id}', 'ProfileController@showID');
+Route::get('/profile/list', 'ProfileController@list');
+
+// 使用 resource method 以後，Laravel 會自動對應到相對的 action
+Route::resource('data','DataController');

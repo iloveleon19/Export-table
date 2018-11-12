@@ -25,7 +25,7 @@ browser_export("Excel2007",'excel.xlsx');  //不保存在當前文檔夾下，�
 $objWrite->save('php://output');           //保存
 
 function browser_export($type,$filename){  //聲明一個方法  判斷保存 保存格式
-    if($type=='Excel5'){ 
+    if($type=='Excel5'){
         header('Content-Type: application/vnd.ms-excel');
     }else{
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

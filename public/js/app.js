@@ -16653,6 +16653,8 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
 Vue.component('example-component', __webpack_require__(50));
 Vue.component('test', __webpack_require__(53));
 
+Vue.prototype.$http = axios;
+
 var app = new Vue({
   el: '#app',
   router: __WEBPACK_IMPORTED_MODULE_1__routes__["a" /* default */],
@@ -50662,9 +50664,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     mounted: function mounted() {
-        var self = this;
-        axios.get('/tasks').then(function (response) {
-            self.tasks = response.data;
+        var _this = this;
+
+        this.$http.get('/tasks').then(function (response) {
+            _this.tasks = response.data;
         });
         console.log('Component mounted.');
     }
